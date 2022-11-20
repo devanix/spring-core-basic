@@ -81,23 +81,25 @@ tasks.named('test') {
   * 회원은 일반과 VIP 두 가지 등급이 있다.
   * 회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다. (미확정)
 
-**[회원 도메인 협력 관계]**
+**[회원 도메인 협력 관계]** <br>
 ![image](https://user-images.githubusercontent.com/1131775/202879403-00270739-262b-44f2-83d8-4a592dc0cb05.png)
 
-**[회원 클래스 다이어그램]**
+**[회원 클래스 다이어그램]** <br>
 ![image](https://user-images.githubusercontent.com/1131775/202879434-73574919-9189-49b5-876b-1056984b6d04.png)
 
-**[회원 객체 다이어그램]**
+**[회원 객체 다이어그램]** <br>
 ![image](https://user-images.githubusercontent.com/1131775/202879443-e026375f-32fb-4e82-a1ef-dd9cf7667ce6.png)
+
+<br>
 회원 서비스: MemberServiceImpl
 
 
 ## 회원 도메인 개발
 소스코드 참조
 
-**[참조] Service와 Repository의 이름 구분**
+**[참조] Service와 Repository의 이름 구분** <br>
 ![image](https://user-images.githubusercontent.com/1131775/202879592-12a14cf2-b0e5-49f6-9d55-8619bb22a094.png)
 
-**[관례] ~impl**
-MemberServiceImpl과 같이 구현체가 하나만 존재할 경우
+**[관례] ~impl** <br>
+MemberServiceImpl과 같이 구현체가 하나만 존재할 경우<br>
 *impl과 같이 접두어(suffix)를 사용해서 만든다.
