@@ -75,3 +75,18 @@ tasks.named('test') {
 그럼 시작해보자.
 
 
+## 회원 도메인 설계
+* 회원 도메인 요구사항
+  * 회원을 가입하고 조회할 수 있다.
+  * 회원은 일반과 VIP 두 가지 등급이 있다.
+  * 회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다. (미확정)
+
+**[회원 도메인 협력 관계]**
+![image](https://user-images.githubusercontent.com/1131775/202879403-00270739-262b-44f2-83d8-4a592dc0cb05.png)
+
+**[회원 클래스 다이어그램]**
+![image](https://user-images.githubusercontent.com/1131775/202879434-73574919-9189-49b5-876b-1056984b6d04.png)
+
+**[회원 객체 다이어그램]**
+![image](https://user-images.githubusercontent.com/1131775/202879443-e026375f-32fb-4e82-a1ef-dd9cf7667ce6.png)
+회원 서비스: MemberServiceImpl
