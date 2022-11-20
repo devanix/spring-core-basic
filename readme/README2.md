@@ -103,3 +103,39 @@ tasks.named('test') {
 **[관례] ~impl** <br>
 MemberServiceImpl과 같이 구현체가 하나만 존재할 경우<br>
 *impl과 같이 접두어(suffix)를 사용해서 만든다.
+
+
+## 회원 도메인 실행과 테스트
+
+### 회원 도메인 - 회원 가입 테스트
+```java
+class MemberServiceTest {
+
+    MemberService memberService = new MemberServiceImpl();
+
+    @Test
+    @DisplayName("회원 가입 및 회원 조회하여 비교 테스트")
+    void join() {
+        // given
+        Member member = new Member(1L, "Luka", Grade.VIP);
+
+        // when
+        memberService.join(member);
+        Member findMember = memberService.findMember(1L);
+
+        // then
+        Assertions.assertThat(member).isEqualTo(findMember);
+    }
+}
+```
+
+
+**[참조] JUnit5 - LifCyle**<br>
+![image](https://user-images.githubusercontent.com/1131775/202880200-02aa8c95-c678-41eb-b059-fbe1891bb1a8.png)
+
+#### 회원 도메인 설계의 문제점
+* MemberServiceTest 문제점
+* 다른 저장소로 변경할 때 OCP 원칙을 잘 준수할까요?
+* DIP를 잘 지키고 있을까요?
+* 구현까지 모두 의존하는 문제가 있음
+  * MemberService memberService = new MemberServiceImpl();
