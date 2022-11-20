@@ -90,3 +90,14 @@ tasks.named('test') {
 **[회원 객체 다이어그램]**
 ![image](https://user-images.githubusercontent.com/1131775/202879443-e026375f-32fb-4e82-a1ef-dd9cf7667ce6.png)
 회원 서비스: MemberServiceImpl
+
+
+## 회원 도메인 개발
+소스코드 참조
+
+**[참조] Service와 Repository의 이름 구분**
+![image](https://user-images.githubusercontent.com/1131775/202879592-12a14cf2-b0e5-49f6-9d55-8619bb22a094.png)
+
+**[관례] ~impl**
+MemberServiceImpl과 같이 구현체가 하나만 존재할 경우
+*impl과 같이 접두어(suffix)를 사용해서 만든다.
